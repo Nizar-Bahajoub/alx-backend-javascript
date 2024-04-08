@@ -4,7 +4,7 @@ export default class Currency {
       throw new TypeError('Name must be a string');
     }
     if (typeof code !== 'string') {
-      throw new TypeError('Code must be a string')
+      throw new TypeError('Code must be a string');
     }
     this._name = name;
     this._code = code;
@@ -28,8 +28,8 @@ export default class Currency {
    * @param {String} code
    */
   set code(code) {
-    if (typeof code != 'string') {
-      throw new TypeError('Code must be a string')
+    if (typeof code !== 'string') {
+      throw new TypeError('Code must be a string');
     }
   }
 

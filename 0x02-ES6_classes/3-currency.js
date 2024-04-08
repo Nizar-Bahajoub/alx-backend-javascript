@@ -31,6 +31,7 @@ export default class Currency {
     if (typeof code !== 'string') {
       throw new TypeError('Code must be a string');
     }
+    this._code = code;
   }
 
   get code() {

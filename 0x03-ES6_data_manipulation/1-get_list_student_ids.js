@@ -3,12 +3,7 @@ const getListStudentIds = (array) => {
     return [];
   }
 
-  const newArr = [];
-  array.map((line) => {
-    newArr.push(line.id);
-  });
-
-  return newArr;
+  return array.map((line) => line.id);
 };
 
 export default getListStudentIds;

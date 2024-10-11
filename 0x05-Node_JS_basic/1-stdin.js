@@ -3,6 +3,8 @@ process.stdin.on('data', (input) => {
   const name = String(input).trim();
   console.log(`Your name is: ${name}`);
 
-  console.log('This important software is now closing');
+  if (!process.stdin.isTTY) {
+    console.log('This important software is now closing!');
+  }
   process.exit();
 });

@@ -1,8 +1,8 @@
 import fs from 'fs';
 
-function readDatabse(path) {
+function readDatabase(path) {
 	return new Promise((resolve, reject) => {
-		fs.reaFile(path, 'utf8', (err, records) => {
+		fs.readFile(path, 'utf8', (err, records) => {
 			if (err) reject(new Error('Cannot load the database'));
 			else {
 				const content = records.split('\n');
@@ -11,7 +11,7 @@ function readDatabse(path) {
 				content.forEach((record) => {
 					const line = record.split(',');
 					if (line[3] && line[0]) {
-						if (Object.Keys(report).indexOf(line[3]) === -1) {
+						if (Object.keys(report).indexOf(line[3]) === -1) {
 							report[line[3]] = [line[0]];
 						} else {
 							(report[line[3]]).push(line[0]);
